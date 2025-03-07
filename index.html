@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand cross Triathlon de Maisons-Laffitte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Grand cross Triathlon de Maisons-Laffitte</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#general">Présentation</a></li>
+            <li><a href="#formats">Formats</a></li>
+            <li><a href="#register">S'inscrire</a></li>
+            <li><a href="#infos-pratiques">Informations pratiques</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="quote-container">
+        <div class="quote">
+            <p id="quote-text"></p>
+            <p id="quote-author"></p>
+        </div>
+    </div>
+
+    <section id="general">
+        <h2>Présentation</h2>
+        <p>Préparez-vous à vivre une expérience inoubliable au <span class="highlight">Cross Triathlon de
+                Maisons-Laffitte</span> ! Cet événement phare est l’occasion parfaite pour repousser vos limites, tester
+            votre endurance et ressentir l’adrénaline comme jamais auparavant. 🏊‍♂️🚴‍♂️🏃‍♂️</p>
+        <p>Plongez dans l’eau scintillante de l'étang de Corra, pédalez à toute vitesse à travers des paysages pittoresques, et
+            courez à travers des sentiers boisés magnifiques. Chaque étape est une aventure épique, conçue pour éveiller
+            votre esprit de compétition et libérer votre potentiel intérieur.</p>
+        <p>Laissez-vous porter par l’énergie électrique de la foule, le soutien inébranlable de vos coéquipiers et
+            l’excitation palpable de chaque instant. Le <span class="highlight">Cross Triathlon de
+                Maisons-Laffitte</span> n’est pas seulement une course, c’est une célébration du courage, de la
+            détermination et de la passion.</p>
+        <p>Que vous soyez un athlète chevronné ou que vous releviez ce défi pour la première fois, vous allez découvrir
+            que vous êtes capable de plus que vous ne l’auriez jamais imaginé. Préparez-vous à triompher, à vivre des
+            moments de dépassement de soi et à créer des souvenirs inoubliables.</p>
+        <p>Et ce n’est pas tout ! Le club de triathlon de Maisons-Laffitte est réputé pour son esprit d’équipe
+            exceptionnel et l’accueil chaleureux de ses membres. Chaque athlète, débutant ou expérimenté, est accueilli
+            à bras ouverts et encouragé à donner le meilleur de lui-même. La convivialité et la camaraderie qui règnent
+            au sein du club font toute la différence et transforment chaque entraînement en un moment de pur plaisir. 🤗
+        </p>
+
+        <div class="slideshow-container">
+            <div class="slide"> <img src="images/photo_groupe1.jpg" style="width:100%"> </div>
+            <div class="slide active"> <img src="images/photo_groupe2.jpg" style="width:100%"> </div>
+            <div class="slide"> <img src="images/photo_groupe3.jpg" style="width:100%"> </div>
+            <div class="slide"> <img src="images/photo_groupe4.jpg" style="width:100%"> </div>
+            <div class="slide"> <img src="images/photo_groupe5.jpg" style="width:100%"> </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a> <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        <div class="dot-container">
+            <span class="dot active-dot" onclick="currentSlide(1)"></span><span class="dot"
+                onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </section>
+
+    <section id="formats">
+        <h2>Formats</h2>
+        <hr class="sep-formats">
+        <div class="race">
+            <h3>Cross Triathlon S</h3>
+            <p>Un triathlon modeste pour les plus peureux. Le tracé de la course à pied ne présente pas de difficultés
+                particulières, comme visible ci-dessous :</p>
+                <div class="strava-embed-placeholder" data-embed-type="route" data-embed-id="22400911" data-style="standard" data-map-hash="8.35/-21.117/55.475" data-from-embed="true"></div><script src="https://strava-embeds.com/embed.js"></script>
+            <p><br></p>
+        </div>
+        <hr class="sep-formats">
+        <div class="race">
+            <h3>Cross Triathlon M</h3>
+            <p>Le Format M se distingue tout particulièrement par sa natation dans l'étang du Corra, attention à ne pas
+                boire la tasse !</p>
+            <img src="images/parcours_photo.jpg" alt="Triathlon Event" width="700">
+            <p><br></p>
+        </div>
+        <hr class="sep-formats">
+        <div class="race">
+            <h3>Cross Triathlon L</h3>
+            <p>La particularité du parcours L est son vélo très exigeant. Voici le niveau de difficulté auquel vous
+                devez vous attendre:</p>
+            <iframe width="700" height="450" src="https://www.youtube.com/embed/Uk16Zdd10_k?si=u_ahDTbR7SHI0yG8"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    <section id="register">
+        <h2>Inscription</h2>
+        <p>Allez, vas-y. T'attends quoi ? Allez clique là-dessus !</p>
+        <button class="flashy-button"
+            onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'">S'inscrire
+    </section>
+
+    <section id="infos-pratiques">
+        <h2>Informations pratiques</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">Dois-je venir habillé ?</div>
+                <div class="faq-answer">Mais enfin monsieur sortez de chez moi</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Ai-je le droit de souhaiter un joyeux anniversaire sur un
+                    groupe de plus de 10 personnes ?</div>
+                <div class="faq-answer">Cette action entraînera une disqualification immédiate du concurrent.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Je ne pensais pas que le vélo se passait dans la piscine, c'est normal ?</div>
+                <div class="faq-answer">Vous vous êtes trompé de bassin, le triathlon se déroule en extérieur et les
+                    cours d'aquabike en intérieur.</div>
+            </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Pour plus d'informations, n'hésitez pas à ne pas contacter coach Guillaume à</p>
+        
+
+        <p>Mail 📫: <a href="mailto:coach.guillaume@triathlon-event.com<">coach.guillaume@triathlon-event.com<</a></p>
+        <p>Tel 📱: <a href="tel:+123 456 7890">+123 456 7890</a></p>
+        <p><br></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Coach Guillaume Triathlon Event. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const quotes = [
+                { text: "‟Un truc de zinzin”", author: "Le maire de Maisons-Laffitte" },
+                { text: "‟Le dernier arrivé débalise le parcours”", author: "Coach Guillaume" },
+                { text: "‟Je croyais que c'était le samedi d'après”", author: "Un DNS" },
+                // Add more quotes as needed
+            ];
+
+            let currentQuoteIndex = 0;
+            const quoteText = document.getElementById('quote-text');
+            const quoteAuthor = document.getElementById('quote-author');
+            const quoteContainer = document.querySelector('.quote');
+
+            function showNextQuote() {
+                quoteContainer.classList.remove('active');
+                quoteContainer.classList.add('exiting');
+                setTimeout(() => {
+                    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+                    quoteText.textContent = quotes[currentQuoteIndex].text;
+                    quoteAuthor.textContent = quotes[currentQuoteIndex].author;
+                    quoteContainer.classList.remove('exiting');
+                    quoteContainer.classList.add('active');
+                }, 1000); // Match this duration with the CSS transition duration
+            }
+
+            // Initialize with the first quote
+            quoteText.textContent = quotes[currentQuoteIndex].text;
+            quoteAuthor.textContent = quotes[currentQuoteIndex].author;
+            quoteContainer.classList.add('active');
+
+            // Change quote every 5 seconds
+            setInterval(showNextQuote, 7000);
+        });
+    </script>
+
+    <script> document.querySelectorAll('.faq-question').forEach(item => { item.addEventListener('click', () => { item.parentElement.classList.toggle('active'); }); }); </script>
+
+    <script> let slideIndex = 2; function changeSlide(n) { showSlide(slideIndex += n); } function currentSlide(n) { showSlide(slideIndex = n); } function showSlide(n) { let slides = document.querySelectorAll('.slide'); let dots = document.querySelectorAll('.dot'); if (n > slides.length) { slideIndex = 1 } if (n < 1) { slideIndex = slides.length } slides.forEach((slide, index) => { slide.style.display = (index === slideIndex - 1) ? 'block' : 'none'; dots[index].classList.toggle('active-dot', index === slideIndex - 1); }); } showSlide(slideIndex); </script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+</body>
+
+</html>

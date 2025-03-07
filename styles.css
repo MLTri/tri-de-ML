@@ -1,0 +1,309 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+} */
+
+header {
+    background: rgb(230, 26, 59);
+    background: linear-gradient(90deg, rgba(230, 26, 59, 1) 0%, rgba(77, 77, 203, 1) 74%, rgba(63, 100, 195, 1) 100%);
+    color: #fff;
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+nav {
+    background: rgb(230, 26, 59);
+    background: linear-gradient(90deg, rgba(230, 26, 59, 1) 0%, rgba(77, 77, 203, 1) 74%, rgba(63, 100, 195, 1) 100%);
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 0.8rem 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #160568;
+    font-size: 2rem;
+    position: sticky;
+    top: 5rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(255,255,255,0) 100%);
+    z-index: 900;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#quote-container {
+    position: relative;
+    margin: 20px auto;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+    /* Ensure the quotes don't overflow the container */
+}
+
+.quote {
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff5a1c2;
+    ;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.quote.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.quote.exiting {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+#quote-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#quote-author {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.flashy-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: flash 1s infinite alternate, sizePulse 2s infinite;
+    text-transform: uppercase;
+}
+
+@keyframes flash {
+    0% {
+        background-color: #ff6347;
+    }
+
+    50% {
+        background-color: #ff4500;
+    }
+
+    100% {
+        background-color: #ff6347;
+    }
+}
+
+@keyframes sizePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.faq-container {
+    margin: 0 5rem;
+    font-family: Arial, sans-serif;
+}
+
+.faq-question {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    font-size: 1.1rem;
+}
+
+.active .faq-answer {
+    display: block;
+}
+
+.faq-question:before {
+    content: '▶';
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+.active .faq-question:before {
+    transform: rotate(90deg);
+}
+
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #717171;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    /* Vous pouvez remplacer par votre police préférée */
+    font-size: 3em;
+    /* Taille du titre */
+    color: #fff;
+    /* Couleur du texte */
+    text-align: center;
+    /* Centrer le titre */
+    margin-top: 20px;
+    /* Espace au-dessus du titre */
+    margin-bottom: 10px;
+    /* Espace en dessous du titre */
+    text-transform: uppercase;
+    /* Transformer le texte en majuscules */
+    letter-spacing: 2px;
+    /* Espacement entre les lettres */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Ombre du texte */
+    border-bottom: 2px solid #e74c3c;
+    /* Bordure en bas du titre */
+    display: inline-block;
+    /* Pour ajuster la bordure à la largeur du texte */
+    padding-bottom: 15px;
+    /* Espacement entre le texte et la bordure */
+}
+
+.sep-formats {
+    color:#f00d0dd4;
+}
+
+p {
+    font-size: 1.1rem;
+}
