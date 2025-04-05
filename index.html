@@ -13,11 +13,13 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
     <link rel="manifest" href="manifest.json" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <h1>1er Triathlon de Maisons-Laffitte</h1>
+        <h1>1<sup>er</sup> Triathlon de Maisons-Laffitte</h1>
     </header>
     <nav>
         <ul>
@@ -46,23 +48,44 @@
         <p> La course est ouverte aussi bien aux triathlètes aguerris à la recherche d'un bon classement
              qu'aux sportifs voulant découvrir le triple effort. 🏊‍♂️🚴‍♂️🏃‍♂️. 
              En effet, sa natation en piscine, son parcours VTT roulant, ses départs par vagues de niveau et ses distances S et XS pour les jeunes
-              rendent la compétition accessible à tous et sans nécissiter de matériel spécifique</p>
+              rendent la compétition accessible à tous et sans nécessiter de matériel spécifique.</p>
 
 
-        <div class="slideshow-container">
-            <div class="slide"> <img src="images/photo_groupe1.jpg" style="width:100%"> </div>
-            <div class="slide active"> <img src="images/photo_groupe2.jpg" style="width:100%"> </div>
-            <div class="slide"> <img src="images/photo_groupe3.jpg" style="width:100%"> </div>
-            <div class="slide"> <img src="images/photo_groupe4.jpg" style="width:100%"> </div>
-            <div class="slide"> <img src="images/photo_groupe5.jpg" style="width:100%"> </div>
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a> <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <div id="carouselPhotosClub" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPhotosClub" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPhotosClub" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPhotosClub" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselPhotosClub" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselPhotosClub" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>      
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/photo_groupe1.jpg" class="d-block w-100" alt="Photo de groupe 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/photo_groupe2.jpg" class="d-block w-100" alt="Photo de groupe 2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/photo_groupe3.jpg" class="d-block w-100" alt="Photo de groupe 3">
+              </div>
+              <div class="carousel-item">
+                <img src="images/photo_groupe4.jpg" class="d-block w-100" alt="Photo de groupe 4">
+              </div>
+              <div class="carousel-item">
+                <img src="images/photo_groupe5.jpg" class="d-block w-100" alt="Photo de groupe 5">
+              </div>
         </div>
-        <div class="dot-container">
-            <span class="dot active-dot" onclick="currentSlide(1)"></span><span class="dot"
-                onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhotosClub" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPhotosClub" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
         </div>
+
     </section>
     <section id="Parcours">
         <h2>Parcours</h2>
@@ -73,7 +96,7 @@
             <p>Les départs se feront par vagues, garantissant une progression fluide pour tous les participants.</p>
             <p>Format XS (12-17 ans) : 🔹 300 m → 6 longueurs de bassin</p>
             <p>Format S (17 ans et plus) : 🔹 500 m → 10 longueurs de bassin</p>
-            <!-- image aller-retour bassin -->
+            <!-- TODO image aller-retour bassin -->
             <p>🌡️La température habituelle de l'eau à cette période permet de nager sans combinaison. 
                 Toutefois, le port de la combinaison reste autorisé pour ceux qui le souhaitent.
             </p>
@@ -124,13 +147,27 @@
 
     <section id="infos-pratiques">
         <h2>Informations pratiques</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">Puis-je participer avec un vélo type gravel ?</div>
-                <div class="faq-answer">Non, par souci d'équité sur ce parcours assez roulant (et en accord avec les règles de la Fédération Française de Triathlon), les gravels ne sont malheureusement pas autorisés.
+
+        <div class="accordion" id="accordionFAQ">
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                        Puis-je participer avec un vélo type gravel ?
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                    <div class="accordion-body">
+                        Non, par souci d'équité sur ce parcours assez roulant (et en accord avec les règles de la Fédération Française de Triathlon), les gravels ne sont malheureusement pas autorisés.
+                        <br/>
                      Uniquement VTT/VTC "classiques" avec guidons droits.
-                    !</div>
+                    </div>
+                </div>
             </div>
+
+        </div>
+
     </section>
 
     <section id="results">
@@ -151,46 +188,7 @@
         <p><br></p>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const quotes = [
-                { text: "‟Un truc de zinzin”", author: "Le maire de Maisons-Laffitte" },
-                { text: "‟Le dernier arrivé débalise le parcours”", author: "Coach Guillaume" },
-                { text: "‟Je croyais que c'était le dimanche d'après”", author: "Un DNS" },
-                // Add more quotes as needed
-            ];
 
-            let currentQuoteIndex = 0;
-            const quoteText = document.getElementById('quote-text');
-            const quoteAuthor = document.getElementById('quote-author');
-            const quoteContainer = document.querySelector('.quote');
-
-            function showNextQuote() {
-                quoteContainer.classList.remove('active');
-                quoteContainer.classList.add('exiting');
-                setTimeout(() => {
-                    currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-                    quoteText.textContent = quotes[currentQuoteIndex].text;
-                    quoteAuthor.textContent = quotes[currentQuoteIndex].author;
-                    quoteContainer.classList.remove('exiting');
-                    quoteContainer.classList.add('active');
-                }, 1000); // Match this duration with the CSS transition duration
-            }
-
-            // Initialize with the first quote
-            quoteText.textContent = quotes[currentQuoteIndex].text;
-            quoteAuthor.textContent = quotes[currentQuoteIndex].author;
-            quoteContainer.classList.add('active');
-
-            // Change quote every 5 seconds
-            setInterval(showNextQuote, 7000);
-        });
-    </script>
-
-    <script> document.querySelectorAll('.faq-question').forEach(item => { item.addEventListener('click', () => { item.parentElement.classList.toggle('active'); }); }); </script>
-
-    <script> let slideIndex = 2; function changeSlide(n) { showSlide(slideIndex += n); } function currentSlide(n) { showSlide(slideIndex = n); } function showSlide(n) { let slides = document.querySelectorAll('.slide'); let dots = document.querySelectorAll('.dot'); if (n > slides.length) { slideIndex = 1 } if (n < 1) { slideIndex = slides.length } slides.forEach((slide, index) => { slide.style.display = (index === slideIndex - 1) ? 'block' : 'none'; dots[index].classList.toggle('active-dot', index === slideIndex - 1); }); } showSlide(slideIndex); </script>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
 </body>
 
 </html>
