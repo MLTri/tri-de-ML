@@ -15,6 +15,7 @@
     <link rel="manifest" href="manifest.json" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <meta name="description" content="La première édition du Cross-Triathlon de Maisons-Laffitte, le dimanche 25 mai 2025, en format S et XS !"> 
 </head>
 
@@ -22,18 +23,26 @@
     <header>
         <h1>1<sup>er</sup> Triathlon de Maisons-Laffitte</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#general">Présentation</a></li>
-            <li><a href="#Parcours">Parcours</a></li>
-            <li><a href="#register">Inscriptions</a></li>
-            <li><a href="#infos-pratiques">Informations pratiques</a></li>
-            <li><a href="#results">Résultats</a></li>
-            <li><a href="#medias">Photos</a></li>
-            <li><a href="#contact">Contact</a></li>
 
-        </ul>
-    </nav>
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler  my-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list text-white me-2"></i>Menu
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <div class="navbar-nav ">
+                <a class="nav-link text-light fw-semibold active" aria-current="page" href="#general">Présentation</a>
+                <a class="nav-link text-light fw-semibold" href="#Parcours">Parcours</a>
+                <a class="nav-link text-light fw-semibold" href="#register">Inscriptions</a>
+                <a class="nav-link text-light fw-semibold" href="#infos-pratiques">Informations pratiques</a>
+                <a class="nav-link text-light fw-semibold" href="#results">Résultats</a>
+                <a class="nav-link text-light fw-semibold" href="#medias">Photos</a>
+                <a class="nav-link text-light fw-semibold" href="#contact">Contact</a>
+            </div>
+
+          </div>
+        </div>
+      </nav>
 
     <section id="general">
         <h2>Présentation</h2>
