@@ -30,7 +30,7 @@
             <i class="bi bi-list text-white me-2"></i>Menu
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <div class="navbar-nav ">
+            <div class="navbar-nav">
                 <a class="nav-link text-light fw-semibold active" aria-current="page" href="#general">Présentation</a>
                 <a class="nav-link text-light fw-semibold" href="#Parcours">Parcours</a>
                 <a class="nav-link text-light fw-semibold" href="#register">Inscriptions</a>
@@ -197,6 +197,17 @@
         <p>Mail 📫: <a href="mailto:maisonslaffittetriathlon@gmail.com<">maisonslaffittetriathlon@gmail.com</a></p>
         <p><br></p>
     </section>
+
+    <script>
+        // Pour refermer le menu après un clic sur un lien
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+            const navbarCollapse = document.getElementById('navbarSupportedContent');
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+            });
+        });
+    </script>
 
 
 </body>
