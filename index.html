@@ -26,7 +26,7 @@
 
     <nav class="navbar sticky-top navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler  my-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="collapseButton" class="navbar-toggler  my-1 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list text-white me-2"></i>Menu
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -199,14 +199,18 @@
     </section>
 
     <script>
-        // Pour refermer le menu après un clic sur un lien
+
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function () {
-            const navbarCollapse = document.getElementById('navbarSupportedContent');
-            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
+            const collapseButton = document.getElementById('collapseButton');
+            if (window.getComputedStyle(collapseButton).display != 'none') {
+                const navbarCollapse = document.getElementById('navbarSupportedContent');
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
             });
         });
+
     </script>
 
 
