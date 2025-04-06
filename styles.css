@@ -164,3 +164,26 @@ p {
 section {
     word-break: break-word;
 }
+
+/* Styles généraux pour les vidéos */
+video {
+    width: 100%;
+    height: auto;
+    display: none; /* Par défaut, aucune vidéo n'est affichée */
+    max-width: 70em;
+    max-height: 70em;
+}
+
+/* Orientation portrait */
+@media screen and (max-aspect-ratio: 1/1) {
+    #portraitVideo {
+        display: block; /* Affiche la vidéo verticale */
+    }
+}
+
+/* Orientation paysage */
+@media screen and (min-aspect-ratio: 1/1) {
+    #landscapeVideo {
+        display: block; /* Affiche la vidéo horizontale */
+    }
+}
